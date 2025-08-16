@@ -4,7 +4,7 @@ setlocal enabledelayedexpansion
 :: =========================
 :: CONFIGURATION
 :: =========================
-set "GITHUB_BAT_URL=https://raw.githubusercontent.com/username/repo/main/myscript.bat"
+set "GITHUB_BAT_URL=https://raw.githubusercontent.com/Vinodsmiley8/SOME-OF-MY-WORKS/main/Phase2.bat"
 set "EXE_FOLDER=C:\Test"
 set "DOWNLOAD_BAT=%USERPROFILE%\AppData\Local\Temp\myscript.bat"
 
